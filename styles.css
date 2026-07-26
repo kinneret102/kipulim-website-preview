@@ -322,7 +322,7 @@ body.a11y-reduced-motion *::after {
 
 .accessibility-widget {
   position: fixed;
-  left: 106px;
+  left: 28px;
   bottom: max(21px, calc(100vh - 759px));
   z-index: 40;
   direction: rtl;
@@ -440,58 +440,6 @@ body.a11y-reduced-motion *::after {
   height: 709px;
   object-fit: cover;
   background: url("assets/hero-poster.png") center / cover no-repeat;
-}
-
-.hero-sound {
-  position: absolute;
-  z-index: 2;
-  left: 28px;
-  bottom: 21px;
-  width: 60px;
-  height: 60px;
-  border: 0;
-  border-radius: 50%;
-  background: rgba(96, 94, 89, 0.74);
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  backdrop-filter: blur(8px);
-  transition:
-    transform 220ms ease,
-    background-color 220ms ease;
-}
-
-.hero-sound:hover,
-.hero-sound:focus-visible {
-  transform: scale(1.055);
-  background: rgba(82, 80, 76, 0.82);
-}
-
-.sound-icon {
-  position: relative;
-  width: 29px;
-  height: 29px;
-  display: block;
-}
-
-.sound-icon img {
-  position: absolute;
-  display: block;
-  filter: brightness(0) invert(1);
-  pointer-events: none;
-}
-
-.sound-body-icon {
-  right: 13.2px;
-  top: 7.7px;
-  width: 15.22px;
-  height: 16.05px;
-}
-
-.sound-muted-icon {
-  inset: 0;
-  width: 29px;
-  height: 29px;
 }
 
 .hero-overlay {
@@ -2212,7 +2160,7 @@ details p {
   }
 
   .accessibility-widget {
-    left: 90px;
+    left: 28px;
     bottom: max(16px, calc(100vh - 669px));
   }
 

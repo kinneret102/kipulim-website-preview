@@ -107,7 +107,6 @@ applyAccessibilityState();
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const heroVideo = document.querySelector(".hero-media");
-const heroSound = document.querySelector("[data-hero-sound]");
 
 if (heroVideo) {
   heroVideo.muted = true;
@@ -116,34 +115,6 @@ if (heroVideo) {
   heroVideo.playsInline = true;
   heroVideo.play().catch(() => {});
   heroVideo.addEventListener("loadeddata", () => heroVideo.play().catch(() => {}), { once: true });
-}
-
-if (heroVideo && heroSound) {
-  let heroSoundEnabled = false;
-
-  const setHeroSound = (enabled) => {
-    heroSoundEnabled = enabled;
-    heroVideo.muted = !enabled;
-    heroSound.classList.toggle("is-on", enabled);
-    heroSound.setAttribute("aria-pressed", String(enabled));
-    heroSound.setAttribute(
-      "aria-label",
-      enabled ? "כיבוי סאונד" : "הפעלת סאונד",
-    );
-    heroVideo.play().catch(() => {});
-  };
-
-  heroSound.addEventListener("click", () => {
-    if (heroSoundEnabled && heroVideo.paused) {
-      heroVideo.play().catch(() => {});
-      heroSound.setAttribute("aria-label", "כיבוי סאונד");
-      return;
-    }
-
-    setHeroSound(!heroSoundEnabled);
-  });
-
-  setHeroSound(false);
 }
 
 const revealObserver = prefersReducedMotion
