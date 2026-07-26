@@ -1659,36 +1659,38 @@ details p {
 }
 
 .statement-page {
-  padding: 170px 20px 96px;
-  background: var(--cream);
+  padding: 232px 20px 120px;
+  background: #fff;
 }
 
 .statement-content {
-  width: min(860px, 100%);
-  margin: 0 auto;
+  width: min(970px, 100%);
+  margin-right: max(0px, calc((100vw - 1178px) / 2));
+  margin-left: auto;
   color: var(--black);
   text-align: right;
 }
 
 .statement-content h1 {
-  margin: 0 0 28px;
-  font-size: clamp(44px, 7vw, 82px);
-  line-height: 1.04;
+  margin: 0 0 54px;
+  font-size: clamp(42px, 4.1vw, 62px);
+  line-height: 1.06;
   font-weight: 900;
 }
 
 .statement-content h2 {
-  margin: 52px 0 14px;
-  font-size: 28px;
-  line-height: 36px;
+  margin: 30px 0 6px;
+  font-size: 16px;
+  line-height: 28px;
   font-weight: 900;
 }
 
 .statement-content p,
 .statement-content li {
-  color: rgba(17, 17, 17, 0.72);
-  font-size: 18px;
-  line-height: 34px;
+  margin: 0 0 16px;
+  color: var(--black);
+  font-size: 16px;
+  line-height: 28px;
 }
 
 .statement-content ul {
@@ -1702,6 +1704,14 @@ details p {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;
+}
+
+.statement-updated {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--black);
+  font-size: 16px;
+  line-height: 28px;
 }
 
 .compact-footer {

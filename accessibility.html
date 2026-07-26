@@ -104,24 +104,74 @@
       </article>
     </main>
 
-    <footer class="site-footer compact-footer">
+    <footer class="site-footer">
+      <div class="footer-deco" aria-hidden="true"></div>
       <div class="footer-inner">
         <div class="footer-logo"><img src="assets/logo.svg" alt="קיפולים" /></div>
         <div class="footer-contact">
           <h3>יצירת קשר</h3>
           <a href="tel:0526370505">052-6370505</a>
           <a href="mailto:kipulim.il@gmail.com">kipulim.il@gmail.com</a>
+          <div class="footer-socials" aria-label="רשתות חברתיות">
+            <a class="social" href="https://wa.me/972526370505" aria-label="וואטסאפ"><img src="assets/social-whatsapp.svg" alt="" /></a>
+            <a class="social" href="https://www.instagram.com/kipulim_/" target="_blank" rel="noopener noreferrer" aria-label="אינסטגרם"><img src="assets/social-instagram.svg" alt="" /></a>
+            <a class="social tiktok" href="https://www.tiktok.com/@kipulimil" target="_blank" rel="noopener noreferrer" aria-label="טיקטוק"><img src="assets/social-tiktok.svg" alt="" /></a>
+            <a class="social" href="https://www.facebook.com/Kipulim.co.il" target="_blank" rel="noopener noreferrer" aria-label="פייסבוק"><img src="assets/social-facebook.svg" alt="" /></a>
+          </div>
         </div>
         <div class="footer-legal">
           <h3>תנאים ומדיניות</h3>
           <a href="privacy-policy.html">מדיניות פרטיות</a>
-          <a href="terms.html">תקנון האתר</a>
+          <a href="terms.html">תנאי שימוש</a>
           <a href="accessibility.html" aria-current="page">הצהרת נגישות</a>
-          <a href="cancellation-policy.html">מדיניות ביטולים</a>
+        </div>
+        <div class="footer-nav">
+          <h3>ניווט</h3>
+          <div class="footer-nav-columns">
+            <div>
+              <a href="index.html#about">אודות</a>
+              <a href="index.html#packages">חבילות</a>
+              <a href="index.html#testimonials">המלצות</a>
+              <a href="index.html#benefits">הטבות</a>
+            </div>
+            <div>
+              <a href="index.html#services">השירותים שלנו</a>
+              <a href="index.html#process">התהליך שלנו</a>
+              <a href="index.html#values">הערכים שלנו</a>
+              <a href="index.html#why">למה לבחור בנו</a>
+            </div>
+          </div>
         </div>
       </div>
       <p class="copyright">כל הזכויות שמורות לקיפולים</p>
     </footer>
+
+    <div class="accessibility-widget" data-accessibility-widget>
+      <button
+        class="accessibility-toggle"
+        type="button"
+        aria-label="פתיחת תפריט נגישות"
+        aria-expanded="false"
+        aria-controls="accessibility-panel"
+        data-accessibility-toggle
+      >
+        <img src="assets/accessibility-glyph.svg" alt="" aria-hidden="true" />
+      </button>
+      <div class="accessibility-panel" id="accessibility-panel" role="region" aria-label="תפריט נגישות" hidden>
+        <div class="accessibility-head">
+          <strong>נגישות</strong>
+          <button type="button" aria-label="סגירת תפריט נגישות" data-accessibility-close>סגור</button>
+        </div>
+        <div class="accessibility-actions">
+          <button type="button" data-accessibility-action="font">הגדלת טקסט</button>
+          <button type="button" data-accessibility-action="contrast">ניגודיות גבוהה</button>
+          <button type="button" data-accessibility-action="links">הדגשת קישורים</button>
+          <button type="button" data-accessibility-action="spacing">ריווח טקסט</button>
+          <button type="button" data-accessibility-action="motion">עצירת אנימציות</button>
+          <button type="button" data-accessibility-action="reset">איפוס</button>
+        </div>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
