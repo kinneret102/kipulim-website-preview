@@ -134,7 +134,7 @@ img {
 }
 
 .social.unavailable {
-  opacity: 0.55;
+  opacity: 1;
 }
 
 .social.tiktok {
@@ -282,6 +282,21 @@ body.a11y-contrast .site-footer a {
   color: #fff;
 }
 
+body.a11y-contrast .reason-list span,
+body.a11y-contrast .perk-list span,
+body.a11y-contrast .perk-list article span {
+  color: #ffd400;
+}
+
+body.a11y-contrast .value-grid span,
+body.a11y-contrast .ghost-number {
+  color: rgba(0, 0, 0, 0.72);
+}
+
+body.a11y-contrast .dark .ghost-number {
+  color: rgba(255, 255, 255, 0.72);
+}
+
 body.a11y-links a:not(.button):not(.package-image-card):not(.social):not(.brand) {
   text-decoration: underline;
   text-decoration-thickness: 2px;
@@ -315,24 +330,25 @@ body.a11y-reduced-motion *::after {
   height: 82px;
   border: 0;
   border-radius: 50%;
-  background: var(--black);
-  color: #fff;
+  padding: 0;
+  background: transparent;
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
   cursor: pointer;
-  font-size: 13px;
-  line-height: 18px;
-  font-weight: 900;
   transition:
     transform 220ms ease,
-    background-color 220ms ease,
-    color 220ms ease;
+    filter 220ms ease;
+}
+
+.accessibility-toggle img {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .accessibility-toggle:hover,
 .accessibility-toggle:focus-visible {
   transform: scale(1.05);
-  background: var(--yellow);
-  color: var(--black);
+  filter: brightness(1.04);
 }
 
 .accessibility-panel {
@@ -705,14 +721,14 @@ p {
 .reason-list span,
 .perk-list span,
 .value-grid span {
-  color: rgba(241, 192, 4, 0.88);
+  color: rgba(241, 192, 4, 0.28);
   font-size: 13px;
   line-height: 20px;
   font-weight: 900;
 }
 
 .value-grid span {
-  color: rgba(17, 17, 17, 0.66);
+  color: rgba(17, 17, 17, 0.25);
 }
 
 .reason-list h3 {
@@ -803,14 +819,14 @@ p {
   position: absolute;
   top: -6px;
   right: 80px;
-  color: rgba(17, 17, 17, 0.5);
+  color: rgba(17, 17, 17, 0.04);
   font-size: 130px;
   line-height: 130px;
   font-weight: 900;
 }
 
 .dark .ghost-number {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.04);
 }
 
 .service-copy h3 {
@@ -1131,7 +1147,7 @@ p {
   grid-row: 1 / span 2;
   align-self: start;
   justify-self: end;
-  color: rgba(241, 192, 4, 0.88);
+  color: rgba(241, 192, 4, 0.2);
   font-size: 12px;
   line-height: 16px;
 }
