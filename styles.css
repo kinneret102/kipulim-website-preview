@@ -181,6 +181,10 @@ img {
   color: var(--yellow);
 }
 
+.mobile-line-break {
+  display: inline;
+}
+
 .dark-micro {
   color: rgba(255, 255, 255, 0.25);
 }
@@ -2218,7 +2222,7 @@ details p {
 
   .stats {
     width: 100%;
-    padding: 52px 34px;
+    padding: 40px 34px 36px;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0;
@@ -2226,7 +2230,7 @@ details p {
   }
 
   .stats div {
-    min-height: 134px;
+    min-height: 124px;
     display: grid;
     align-content: center;
     border-left: 1px solid rgba(17, 17, 17, 0.07);
@@ -2274,6 +2278,10 @@ details p {
     padding-block: 88px;
   }
 
+  #about {
+    padding-top: 44px;
+  }
+
   .why,
   .values {
     padding-block: 88px;
@@ -2282,6 +2290,10 @@ details p {
   .why .section-heading,
   .values .section-heading {
     margin-bottom: 40px;
+  }
+
+  .mobile-line-break {
+    display: block;
   }
 
   .reason-list {
@@ -2435,12 +2447,12 @@ details p {
   }
 
   .process-steps .active .process-step-button {
-    min-height: 198px;
-    padding: 31px 0 28px;
+    min-height: 0;
+    padding: 31px 0 34px;
   }
 
   .process-steps .active .process-step-panel {
-    max-height: 92px;
+    max-height: 240px;
     margin-top: 18px;
     font-size: 18px;
     line-height: 36px;
@@ -2519,10 +2531,7 @@ details p {
   }
 
   .footer-deco {
-    inset: 0 -210px auto;
-    height: 880px;
-    opacity: 0.045;
-    background-size: 760px auto;
+    display: none;
   }
 
   .footer-inner {
@@ -2543,8 +2552,9 @@ details p {
   }
 
   .footer-logo {
-    left: 76px;
+    left: 50%;
     top: 1003px;
+    transform: translateX(-50%);
   }
 
   .footer-logo img {
@@ -2587,8 +2597,9 @@ details p {
 
   .footer-socials {
     width: 206px;
-    margin: 68px 0 0;
+    margin: 68px auto 0;
     gap: 17px;
+    justify-content: center;
   }
 
   .footer-nav h3 {
@@ -2599,16 +2610,20 @@ details p {
   .footer-nav-columns {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     gap: 20px;
-    direction: rtl;
+    direction: ltr;
   }
 
   .footer-nav-columns > div {
     display: grid;
-    justify-items: end;
+    justify-items: start;
     gap: 20px;
-    direction: rtl;
+    direction: ltr;
+  }
+
+  .footer-nav a {
+    text-align: left;
   }
 
   .copyright {
