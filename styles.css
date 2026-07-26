@@ -297,6 +297,10 @@ body.a11y-contrast .dark .ghost-number {
   color: rgba(255, 255, 255, 0.72);
 }
 
+body.a11y-contrast .accessibility-toggle img {
+  filter: none;
+}
+
 body.a11y-links a:not(.button):not(.package-image-card):not(.social):not(.brand) {
   text-decoration: underline;
   text-decoration-thickness: 2px;
@@ -318,37 +322,41 @@ body.a11y-reduced-motion *::after {
 
 .accessibility-widget {
   position: fixed;
-  left: 24px;
-  bottom: 24px;
+  left: 106px;
+  bottom: max(21px, calc(100vh - 759px));
   z-index: 40;
   direction: rtl;
   font-family: "Noto Sans Hebrew", Arial, sans-serif;
 }
 
 .accessibility-toggle {
-  width: 82px;
-  height: 82px;
+  width: 60px;
+  height: 60px;
   border: 0;
   border-radius: 50%;
   padding: 0;
-  background: transparent;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+  background: rgba(136, 134, 129, 0.92);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.16);
   cursor: pointer;
+  display: grid;
+  place-items: center;
   transition:
     transform 220ms ease,
-    filter 220ms ease;
+    background-color 220ms ease;
 }
 
 .accessibility-toggle img {
-  width: 100%;
-  height: 100%;
+  width: 30px;
+  height: 30px;
   display: block;
+  filter: brightness(0) invert(1);
+  pointer-events: none;
 }
 
 .accessibility-toggle:hover,
 .accessibility-toggle:focus-visible {
   transform: scale(1.05);
-  filter: brightness(1.04);
+  background: rgba(120, 118, 113, 0.96);
 }
 
 .accessibility-panel {
@@ -437,40 +445,53 @@ body.a11y-reduced-motion *::after {
 .hero-sound {
   position: absolute;
   z-index: 2;
-  left: 32px;
-  bottom: 32px;
-  width: 72px;
-  height: 72px;
+  left: 28px;
+  bottom: 21px;
+  width: 60px;
+  height: 60px;
   border: 0;
   border-radius: 50%;
-  background: rgba(126, 122, 116, 0.92);
-  color: #fff;
+  background: rgba(96, 94, 89, 0.74);
   display: grid;
   place-items: center;
   cursor: pointer;
   backdrop-filter: blur(8px);
   transition:
     transform 220ms ease,
-    background-color 220ms ease,
-    border-color 220ms ease;
+    background-color 220ms ease;
 }
 
 .hero-sound:hover,
 .hero-sound:focus-visible {
   transform: scale(1.055);
-  background: rgba(112, 108, 102, 0.96);
+  background: rgba(82, 80, 76, 0.82);
 }
 
 .sound-icon {
-  width: 28px;
-  height: 28px;
+  position: relative;
+  width: 29px;
+  height: 29px;
   display: block;
-  background: currentColor;
-  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='11 5 6 9 2 9 2 15 6 15 11 19 11 5'/%3E%3Cpath d='M15.5 8.5a5 5 0 0 1 0 7'/%3E%3Cpath d='M18.5 5.5a9 9 0 0 1 0 13'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
-.hero-sound:not(.is-on) .sound-icon {
-  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='11 5 6 9 2 9 2 15 6 15 11 19 11 5'/%3E%3Cline x1='22' y1='9' x2='16' y2='15'/%3E%3Cline x1='16' y1='9' x2='22' y2='15'/%3E%3C/svg%3E") center / contain no-repeat;
+.sound-icon img {
+  position: absolute;
+  display: block;
+  filter: brightness(0) invert(1);
+  pointer-events: none;
+}
+
+.sound-body-icon {
+  right: 13.2px;
+  top: 7.7px;
+  width: 15.22px;
+  height: 16.05px;
+}
+
+.sound-muted-icon {
+  inset: 0;
+  width: 29px;
+  height: 29px;
 }
 
 .hero-overlay {
@@ -2191,15 +2212,13 @@ details p {
   }
 
   .accessibility-widget {
-    left: 16px;
-    bottom: 16px;
+    left: 90px;
+    bottom: max(16px, calc(100vh - 669px));
   }
 
   .accessibility-toggle {
-    width: 68px;
-    height: 68px;
-    font-size: 11px;
-    line-height: 16px;
+    width: 60px;
+    height: 60px;
   }
 
   .accessibility-panel {
