@@ -37,15 +37,15 @@
           <a class="social" href="https://wa.me/972526370505" aria-label="וואטסאפ">
             <img src="assets/social-whatsapp.svg" alt="" />
           </a>
-          <span class="social unavailable" aria-hidden="true">
+          <a class="social" href="https://www.instagram.com/kipulim_/" target="_blank" rel="noopener noreferrer" aria-label="אינסטגרם">
             <img src="assets/social-instagram.svg" alt="" />
-          </span>
-          <span class="social tiktok unavailable" aria-hidden="true">
+          </a>
+          <a class="social tiktok" href="https://www.tiktok.com/@kipulimil" target="_blank" rel="noopener noreferrer" aria-label="טיקטוק">
             <img src="assets/social-tiktok.svg" alt="" />
-          </span>
-          <span class="social unavailable" aria-hidden="true">
+          </a>
+          <a class="social" href="https://www.facebook.com/Kipulim.co.il" target="_blank" rel="noopener noreferrer" aria-label="פייסבוק">
             <img src="assets/social-facebook.svg" alt="" />
-          </span>
+          </a>
         </div>
 
         <button class="menu-toggle" type="button" aria-expanded="false" aria-label="פתיחת תפריט" data-menu-toggle>
@@ -296,13 +296,20 @@
           <div class="stars" role="img" aria-label="5 כוכבים">
             <img src="assets/star.svg" alt="" /><img src="assets/star.svg" alt="" /><img src="assets/star.svg" alt="" /><img src="assets/star.svg" alt="" /><img src="assets/star.svg" alt="" />
           </div>
-          <blockquote>
-            “קיפולים שינו לנו את כל החוויה של המעבר. הגענו לבית החדש וכל דבר היה במקום -
-            המטבח מסודר, הארונות מלאים, אפילו התמונות על הקיר. לא האמנתי שאפשר.”
-          </blockquote>
-          <p class="quote-name">מיכל כהן</p>
-          <p class="quote-location">תל אביב</p>
-          <div class="quote-arrows" aria-hidden="true"><span>←</span><span>→</span></div>
+          <div class="quote-slider" aria-live="polite">
+            <article class="quote-slide is-active">
+              <blockquote>
+                “קיפולים שינו לנו את כל החוויה של המעבר. הגענו לבית החדש וכל דבר היה במקום -
+                המטבח מסודר, הארונות מלאים, אפילו התמונות על הקיר. לא האמנתי שאפשר.”
+              </blockquote>
+              <p class="quote-name">מיכל כהן</p>
+              <p class="quote-location">תל אביב</p>
+            </article>
+          </div>
+          <div class="quote-arrows" aria-label="דפדוף בין המלצות">
+            <button type="button" aria-label="המלצה קודמת" data-quote-prev>←</button>
+            <button type="button" aria-label="המלצה הבאה" data-quote-next>→</button>
+          </div>
         </div>
         <div class="video-carousel" aria-label="סרטוני המלצות">
           <p class="visually-hidden" id="media-accessibility-note">
@@ -406,17 +413,17 @@
           <a href="mailto:kipulim.il@gmail.com">kipulim.il@gmail.com</a>
           <div class="footer-socials" aria-label="רשתות חברתיות">
             <a class="social" href="https://wa.me/972526370505" aria-label="וואטסאפ"><img src="assets/social-whatsapp.svg" alt="" /></a>
-            <span class="social unavailable" aria-hidden="true"><img src="assets/social-instagram.svg" alt="" /></span>
-            <span class="social tiktok unavailable" aria-hidden="true"><img src="assets/social-tiktok.svg" alt="" /></span>
-            <span class="social unavailable" aria-hidden="true"><img src="assets/social-facebook.svg" alt="" /></span>
+            <a class="social" href="https://www.instagram.com/kipulim_/" target="_blank" rel="noopener noreferrer" aria-label="אינסטגרם"><img src="assets/social-instagram.svg" alt="" /></a>
+            <a class="social tiktok" href="https://www.tiktok.com/@kipulimil" target="_blank" rel="noopener noreferrer" aria-label="טיקטוק"><img src="assets/social-tiktok.svg" alt="" /></a>
+            <a class="social" href="https://www.facebook.com/Kipulim.co.il" target="_blank" rel="noopener noreferrer" aria-label="פייסבוק"><img src="assets/social-facebook.svg" alt="" /></a>
           </div>
         </div>
         <div class="footer-legal">
           <h3>תנאים ומדיניות</h3>
-          <span class="footer-placeholder">מדיניות פרטיות</span>
-          <span class="footer-placeholder">תקנון האתר</span>
+          <a href="privacy-policy.html">מדיניות פרטיות</a>
+          <a href="terms.html">תקנון האתר</a>
           <a href="accessibility.html">הצהרת נגישות</a>
-          <span class="footer-placeholder">מדיניות ביטולים</span>
+          <a href="cancellation-policy.html">מדיניות ביטולים</a>
         </div>
         <div class="footer-nav">
           <h3>ניווט</h3>

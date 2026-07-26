@@ -354,3 +354,27 @@ if (logoTrack) {
     logoCarouselToggle.textContent = shouldPause ? "הפעלת לוגואים" : "עצירת לוגואים";
   });
 }
+
+const quoteSlides = document.querySelectorAll(".quote-slide");
+const quotePrev = document.querySelector("[data-quote-prev]");
+const quoteNext = document.querySelector("[data-quote-next]");
+let currentQuote = 0;
+
+const setQuoteSlide = (index) => {
+  if (!quoteSlides.length) return;
+
+  currentQuote = (index + quoteSlides.length) % quoteSlides.length;
+  quoteSlides.forEach((slide, slideIndex) => {
+    const isActive = slideIndex === currentQuote;
+    slide.classList.toggle("is-active", isActive);
+    slide.hidden = !isActive;
+  });
+
+  const hasMultipleQuotes = quoteSlides.length > 1;
+  quotePrev?.toggleAttribute("disabled", !hasMultipleQuotes);
+  quoteNext?.toggleAttribute("disabled", !hasMultipleQuotes);
+};
+
+quotePrev?.addEventListener("click", () => setQuoteSlide(currentQuote - 1));
+quoteNext?.addEventListener("click", () => setQuoteSlide(currentQuote + 1));
+setQuoteSlide(0);

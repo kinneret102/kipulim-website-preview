@@ -1212,6 +1212,14 @@ blockquote {
   font-weight: 500;
 }
 
+.quote-slide[hidden] {
+  display: none;
+}
+
+.quote-slide.is-active {
+  animation: quoteFade 260ms ease both;
+}
+
 .quote-name {
   margin: 0 0 6px;
   color: var(--yellow);
@@ -1233,14 +1241,41 @@ blockquote {
   margin: 28px 0 64px;
 }
 
-.quote-arrows span {
+.quote-arrows button {
   width: 44px;
   height: 44px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0;
   display: grid;
   place-items: center;
   background: transparent;
   color: #fff;
+  cursor: pointer;
+  font: inherit;
+  line-height: 1;
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease;
+}
+
+.quote-arrows button:hover,
+.quote-arrows button:focus-visible {
+  transform: scale(1.06);
+  border-color: rgba(255, 255, 255, 0.38);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.quote-arrows button:disabled {
+  cursor: default;
+  opacity: 0.42;
+}
+
+.quote-arrows button:disabled:hover,
+.quote-arrows button:disabled:focus-visible {
+  transform: none;
+  border-color: rgba(255, 255, 255, 0.1);
+  background: transparent;
 }
 
 .video-carousel {
@@ -1327,6 +1362,18 @@ blockquote {
 
   to {
     transform: translateX(calc(-50% - 13.773px));
+  }
+}
+
+@keyframes quoteFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
