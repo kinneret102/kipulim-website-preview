@@ -1840,9 +1840,9 @@ details p {
 
 .footer-nav {
   position: absolute;
-  left: 854px;
+  left: 806px;
   top: 78px;
-  width: 319px;
+  width: 367px;
 }
 
 .footer-nav h3 {
@@ -1853,8 +1853,8 @@ details p {
 
 .footer-nav-columns {
   display: grid;
-  grid-template-columns: 49px 98px 98px;
-  gap: 37px;
+  grid-template-columns: 152px 98px 49px;
+  gap: 34px;
 }
 
 .footer-nav-columns > div {
