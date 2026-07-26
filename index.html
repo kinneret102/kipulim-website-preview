@@ -17,9 +17,10 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">דלגי לתוכן המרכזי</a>
     <header class="site-header" data-header>
       <div class="header-inner">
-        <a class="brand" href="#top" aria-label="קיפולים">
+        <a class="brand" href="#main-content" aria-label="קיפולים - מעבר לתחילת האתר">
           <img src="assets/logo.svg" alt="קיפולים" />
         </a>
 
@@ -36,15 +37,15 @@
           <a class="social" href="https://wa.me/972526370505" aria-label="וואטסאפ">
             <img src="assets/social-whatsapp.svg" alt="" />
           </a>
-          <a class="social" href="#" aria-label="אינסטגרם">
+          <span class="social unavailable" aria-hidden="true">
             <img src="assets/social-instagram.svg" alt="" />
-          </a>
-          <a class="social tiktok" href="#" aria-label="טיקטוק">
+          </span>
+          <span class="social tiktok unavailable" aria-hidden="true">
             <img src="assets/social-tiktok.svg" alt="" />
-          </a>
-          <a class="social" href="#" aria-label="פייסבוק">
+          </span>
+          <span class="social unavailable" aria-hidden="true">
             <img src="assets/social-facebook.svg" alt="" />
-          </a>
+          </span>
         </div>
 
         <button class="menu-toggle" type="button" aria-expanded="false" aria-label="פתיחת תפריט" data-menu-toggle>
@@ -54,7 +55,7 @@
       </div>
     </header>
 
-    <main id="top">
+    <main id="main-content" tabindex="-1">
       <section class="hero">
         <video class="hero-media" autoplay muted loop playsinline preload="auto" poster="assets/hero-poster.png" aria-hidden="true">
           <source src="assets/hero-video.mp4" type="video/mp4" />
@@ -112,10 +113,10 @@
           </div>
         </div>
         <div class="reason-list">
-          <article><span>01</span><h3>מעטפת שירות מלאה</h3><p>מהאריזה הראשונה ועד לכוס הקפה הראשונה בבית החדש.</p></article>
-          <article><span>02</span><h3>צוות מקצועי ואמין</h3><p>אנשי מקצוע מנוסים עם יחס אישי ותשומת לב לכל פרט.</p></article>
-          <article><span>03</span><h3>ארגזים אקולוגיים</h3><p>השכרת ארגזים ידידותיים לסביבה - איכות גבוהה ואחריות מלאה.</p></article>
-          <article><span>04</span><h3>מנהל מעבר אישי</h3><p>איש קשר אחד שמכיר את הפרויקט שלכם לפני ולפנים.</p></article>
+          <article><span aria-hidden="true">01</span><h3>מעטפת שירות מלאה</h3><p>מהאריזה הראשונה ועד לכוס הקפה הראשונה בבית החדש.</p></article>
+          <article><span aria-hidden="true">02</span><h3>צוות מקצועי ואמין</h3><p>אנשי מקצוע מנוסים עם יחס אישי ותשומת לב לכל פרט.</p></article>
+          <article><span aria-hidden="true">03</span><h3>ארגזים אקולוגיים</h3><p>השכרת ארגזים ידידותיים לסביבה - איכות גבוהה ואחריות מלאה.</p></article>
+          <article><span aria-hidden="true">04</span><h3>מנהל מעבר אישי</h3><p>איש קשר אחד שמכיר את הפרויקט שלכם לפני ולפנים.</p></article>
         </div>
       </section>
 
@@ -125,12 +126,12 @@
           <h2>מה שמניע אותנו בכל יום</h2>
         </div>
         <div class="value-grid">
-          <article><span>01</span><h3>דיוק</h3><p>כל פריט מקופל בקפידה. כל ארגז ממוספר. כל פינה מטופלת.</p></article>
-          <article><span>02</span><h3>אמון</h3><p>אתם סומכים עלינו על הרגע הגדול הזה. אנחנו לא לוקחים את זה כמובן מאליו.</p></article>
-          <article><span>03</span><h3>קלילות</h3><p>מעבר לא אמור להיות כאב ראש. אנחנו דואגים לפרטים כדי שאתם תוכלו לנשום.</p></article>
-          <article><span>04</span><h3>איכות</h3><p>חומרי אריזה מהמשובחים. ציוד מקצועי. עבודה ללא פשרות.</p></article>
-          <article><span>05</span><h3>אנושיות</h3><p>אנחנו עובדים עם בני אדם, לא עם ארגזים. הקשר האישי הוא חלק מהשירות.</p></article>
-          <article><span>06</span><h3>ניסיון</h3><p>שנים של עבודה בשטח שמתורגמות לשירות חלק, מהיר ומדויק.</p></article>
+          <article><span aria-hidden="true">01</span><h3>דיוק</h3><p>כל פריט מקופל בקפידה. כל ארגז ממוספר. כל פינה מטופלת.</p></article>
+          <article><span aria-hidden="true">02</span><h3>אמון</h3><p>אתם סומכים עלינו על הרגע הגדול הזה. אנחנו לא לוקחים את זה כמובן מאליו.</p></article>
+          <article><span aria-hidden="true">03</span><h3>קלילות</h3><p>מעבר לא אמור להיות כאב ראש. אנחנו דואגים לפרטים כדי שאתם תוכלו לנשום.</p></article>
+          <article><span aria-hidden="true">04</span><h3>איכות</h3><p>חומרי אריזה מהמשובחים. ציוד מקצועי. עבודה ללא פשרות.</p></article>
+          <article><span aria-hidden="true">05</span><h3>אנושיות</h3><p>אנחנו עובדים עם בני אדם, לא עם ארגזים. הקשר האישי הוא חלק מהשירות.</p></article>
+          <article><span aria-hidden="true">06</span><h3>ניסיון</h3><p>שנים של עבודה בשטח שמתורגמות לשירות חלק, מהיר ומדויק.</p></article>
         </div>
       </section>
 
@@ -142,7 +143,7 @@
 
         <article class="service-row">
           <div class="service-copy">
-            <span class="ghost-number">01</span>
+            <span class="ghost-number" aria-hidden="true">01</span>
             <p class="micro yellow">כל פריט, בטיפול אישי</p>
             <h3>אריזה מקצועית</h3>
             <p>
@@ -158,7 +159,7 @@
         <article class="service-row dark">
           <img src="assets/service-2.jpg" alt="ארון מלתחה אלגנטי" />
           <div class="service-copy">
-            <span class="ghost-number">02</span>
+            <span class="ghost-number" aria-hidden="true">02</span>
             <p class="micro yellow">הבית שלכם, מוכן בשבילכם</p>
             <h3>פריקה וסידור</h3>
             <p>
@@ -172,7 +173,7 @@
 
         <article class="service-row">
           <div class="service-copy">
-            <span class="ghost-number">03</span>
+            <span class="ghost-number" aria-hidden="true">03</span>
             <p class="micro yellow">סדר שמרגיש טוב</p>
             <h3>ארגון הבית</h3>
             <p>
@@ -188,7 +189,7 @@
         <article class="service-row dark">
           <img src="assets/service-4.jpg" alt="כניסה לבית חדש" />
           <div class="service-copy">
-            <span class="ghost-number">04</span>
+            <span class="ghost-number" aria-hidden="true">04</span>
             <p class="micro yellow">אנחנו מנהלים הכל</p>
             <h3>מעטפת מעבר מלאה</h3>
             <p>
@@ -212,13 +213,41 @@
             <span></span>
           </div>
           <div class="process-steps">
-            <article class="process-step" data-step="01" data-title="שיחת היכרות" tabindex="0"><span>01</span><div><h3>שיחת היכרות</h3><p>שיחה קצרה שבה אנחנו מבינות את הבית, התכולה, התאריכים והצרכים המדויקים שלכם.</p></div></article>
-            <article class="process-step" data-step="02" data-title="הצעת מחיר" tabindex="0"><span>02</span><div><h3>הצעת מחיר</h3><p>אחרי איסוף הפרטים נשלחת הצעה מסודרת וברורה, עם השירותים שמתאימים למעבר שלכם.</p></div></article>
-            <article class="process-step" data-step="03" data-title="תכנון המעבר" tabindex="0"><span>03</span><div><h3>תכנון המעבר</h3><p>אנחנו בונות תוכנית עבודה לפי חדרים, סדרי עדיפויות ולוחות זמנים, כדי שהכול ירגיש בשליטה.</p></div></article>
-            <article class="process-step" data-step="04" data-title="אריזה" tabindex="0"><span>04</span><div><h3>אריזה</h3><p>הצוות מגיע במועד שנקבע ומתחיל לעבוד. כל פריט מקופל, ממוספר ומתועד בקפידה.</p></div></article>
-            <article class="process-step" data-step="05" data-title="יום המעבר" tabindex="0"><span>05</span><div><h3>יום המעבר</h3><p>ביום המעבר אנחנו מסנכרנות בין הצוותים ודואגות שכל ארגז וכל פריט יגיעו בצורה רגועה ומסודרת.</p></div></article>
-            <article class="process-step" data-step="06" data-title="פריקה וסידור" tabindex="0"><span>06</span><div><h3>פריקה וסידור</h3><p>בבית החדש אנחנו פורקות, מסדרות וממקמות את הדברים כך שאפשר להתחיל לחיות בו מיד.</p></div></article>
-            <article class="process-step" data-step="07" data-title="כניסה לבית החדש" tabindex="0"><span>07</span><div><h3>כניסה לבית החדש</h3><p>אנחנו עוברות איתכם על הבית, מוודאות שהכול במקום ומשאירות אחרינו תחושה של התחלה נקייה.</p></div></article>
+            <article class="process-step" data-step="01" data-title="שיחת היכרות">
+              <button class="process-step-button" type="button" aria-expanded="false" aria-controls="process-panel-01" id="process-trigger-01">
+                <span class="process-step-number">01</span><span class="process-step-copy"><span class="process-step-heading">שיחת היכרות</span><span class="process-step-panel" id="process-panel-01" aria-labelledby="process-trigger-01" hidden>שיחה קצרה שבה אנחנו מבינות את הבית, התכולה, התאריכים והצרכים המדויקים שלכם.</span></span>
+              </button>
+            </article>
+            <article class="process-step" data-step="02" data-title="הצעת מחיר">
+              <button class="process-step-button" type="button" aria-expanded="false" aria-controls="process-panel-02" id="process-trigger-02">
+                <span class="process-step-number">02</span><span class="process-step-copy"><span class="process-step-heading">הצעת מחיר</span><span class="process-step-panel" id="process-panel-02" aria-labelledby="process-trigger-02" hidden>אחרי איסוף הפרטים נשלחת הצעה מסודרת וברורה, עם השירותים שמתאימים למעבר שלכם.</span></span>
+              </button>
+            </article>
+            <article class="process-step" data-step="03" data-title="תכנון המעבר">
+              <button class="process-step-button" type="button" aria-expanded="false" aria-controls="process-panel-03" id="process-trigger-03">
+                <span class="process-step-number">03</span><span class="process-step-copy"><span class="process-step-heading">תכנון המעבר</span><span class="process-step-panel" id="process-panel-03" aria-labelledby="process-trigger-03" hidden>אנחנו בונות תוכנית עבודה לפי חדרים, סדרי עדיפויות ולוחות זמנים, כדי שהכול ירגיש בשליטה.</span></span>
+              </button>
+            </article>
+            <article class="process-step" data-step="04" data-title="אריזה">
+              <button class="process-step-button" type="button" aria-expanded="false" aria-controls="process-panel-04" id="process-trigger-04">
+                <span class="process-step-number">04</span><span class="process-step-copy"><span class="process-step-heading">אריזה</span><span class="process-step-panel" id="process-panel-04" aria-labelledby="process-trigger-04" hidden>הצוות מגיע במועד שנקבע ומתחיל לעבוד. כל פריט מקופל, ממוספר ומתועד בקפידה.</span></span>
+              </button>
+            </article>
+            <article class="process-step" data-step="05" data-title="יום המעבר">
+              <button class="process-step-button" type="button" aria-expanded="false" aria-controls="process-panel-05" id="process-trigger-05">
+                <span class="process-step-number">05</span><span class="process-step-copy"><span class="process-step-heading">יום המעבר</span><span class="process-step-panel" id="process-panel-05" aria-labelledby="process-trigger-05" hidden>ביום המעבר אנחנו מסנכרנות בין הצוותים ודואגות שכל ארגז וכל פריט יגיעו בצורה רגועה ומסודרת.</span></span>
+              </button>
+            </article>
+            <article class="process-step" data-step="06" data-title="פריקה וסידור">
+              <button class="process-step-button" type="button" aria-expanded="false" aria-controls="process-panel-06" id="process-trigger-06">
+                <span class="process-step-number">06</span><span class="process-step-copy"><span class="process-step-heading">פריקה וסידור</span><span class="process-step-panel" id="process-panel-06" aria-labelledby="process-trigger-06" hidden>בבית החדש אנחנו פורקות, מסדרות וממקמות את הדברים כך שאפשר להתחיל לחיות בו מיד.</span></span>
+              </button>
+            </article>
+            <article class="process-step" data-step="07" data-title="כניסה לבית החדש">
+              <button class="process-step-button" type="button" aria-expanded="false" aria-controls="process-panel-07" id="process-trigger-07">
+                <span class="process-step-number">07</span><span class="process-step-copy"><span class="process-step-heading">כניסה לבית החדש</span><span class="process-step-panel" id="process-panel-07" aria-labelledby="process-trigger-07" hidden>אנחנו עוברות איתכם על הבית, מוודאות שהכול במקום ומשאירות אחרינו תחושה של התחלה נקייה.</span></span>
+              </button>
+            </article>
           </div>
         </div>
       </section>
@@ -235,11 +264,11 @@
             </p>
           </div>
           <div class="perk-list">
-            <article><span>01</span><h3>הובלה</h3><p>שירות מקצועי ואמין ומחיר מיוחד ע״י ספקים חיצוניים שנבחרו בקפידה על ידינו</p></article>
-            <article><span>02</span><h3>שירותי נקיון</h3><p>10% הנחה ללקוחותינו עבור נקיון דירה ע״י חברות מקצועיות שעובדות איתנו</p></article>
-            <article><span>03</span><h3>פתרונות אחסון בתוך הבית</h3><p>התאמה אישית של פתרונות אחסון לבית החדש והטבת 20% הנחה ללקוחותינו</p></article>
-            <article><span>02</span><h3>שירותי הנדימן</h3><p>מתוך מאגר אנשי מקצוע אמינים ואיכותיים שעובדים איתנו במחירים מיוחדים</p></article>
-            <article><span>04</span><h3>ארגזים אקלוגיים להשכרה</h3><p>אפשרות להשכרת ארגזים רב-פעמיים, איכותיים וחזקים במיוחד</p></article>
+            <article><span aria-hidden="true">01</span><h3>הובלה</h3><p>שירות מקצועי ואמין ומחיר מיוחד ע״י ספקים חיצוניים שנבחרו בקפידה על ידינו</p></article>
+            <article><span aria-hidden="true">02</span><h3>שירותי נקיון</h3><p>10% הנחה ללקוחותינו עבור נקיון דירה ע״י חברות מקצועיות שעובדות איתנו</p></article>
+            <article><span aria-hidden="true">03</span><h3>פתרונות אחסון בתוך הבית</h3><p>התאמה אישית של פתרונות אחסון לבית החדש והטבת 20% הנחה ללקוחותינו</p></article>
+            <article><span aria-hidden="true">02</span><h3>שירותי הנדימן</h3><p>מתוך מאגר אנשי מקצוע אמינים ואיכותיים שעובדים איתנו במחירים מיוחדים</p></article>
+            <article><span aria-hidden="true">04</span><h3>ארגזים אקלוגיים להשכרה</h3><p>אפשרות להשכרת ארגזים רב-פעמיים, איכותיים וחזקים במיוחד</p></article>
           </div>
         </div>
       </section>
@@ -267,7 +296,7 @@
         <div class="quote-block">
           <p class="micro dark-micro">לקוחות מספרים</p>
           <h2>מה אומרים עלינו</h2>
-          <div class="stars" aria-label="5 כוכבים">
+          <div class="stars" role="img" aria-label="5 כוכבים">
             <img src="assets/star.svg" alt="" /><img src="assets/star.svg" alt="" /><img src="assets/star.svg" alt="" /><img src="assets/star.svg" alt="" /><img src="assets/star.svg" alt="" />
           </div>
           <blockquote>
@@ -276,23 +305,27 @@
           </blockquote>
           <p class="quote-name">מיכל כהן</p>
           <p class="quote-location">תל אביב</p>
-          <div class="quote-arrows" aria-hidden="true"><button>←</button><button>→</button></div>
+          <div class="quote-arrows" aria-hidden="true"><span>←</span><span>→</span></div>
         </div>
         <div class="video-carousel" aria-label="סרטוני המלצות">
+          <p class="visually-hidden" id="media-accessibility-note">
+            סרטוני ההמלצות מוצגים ללא קול כברירת מחדל. ניתן לעצור את התנועה באמצעות הכפתור הבא.
+          </p>
+          <button class="carousel-control" type="button" data-carousel-toggle="videos" aria-pressed="false">עצירת סרטונים</button>
           <div class="video-track">
-            <video autoplay muted loop playsinline preload="metadata" poster="assets/testimonial-figma-1.png" aria-label="סרטון המלצה 1">
+            <video autoplay muted loop playsinline controls preload="metadata" poster="assets/testimonial-figma-1.png" aria-label="סרטון המלצה 1" aria-describedby="media-accessibility-note">
               <source src="assets/testimonial-video-1.mp4" type="video/mp4" />
             </video>
-            <video autoplay muted loop playsinline preload="metadata" poster="assets/testimonial-figma-2.png" aria-label="סרטון המלצה 2">
+            <video autoplay muted loop playsinline controls preload="metadata" poster="assets/testimonial-figma-2.png" aria-label="סרטון המלצה 2" aria-describedby="media-accessibility-note">
               <source src="assets/testimonial-video-2.mp4" type="video/mp4" />
             </video>
-            <video autoplay muted loop playsinline preload="metadata" poster="assets/testimonial-figma-3.png" aria-label="סרטון המלצה 3">
+            <video autoplay muted loop playsinline controls preload="metadata" poster="assets/testimonial-figma-3.png" aria-label="סרטון המלצה 3" aria-describedby="media-accessibility-note">
               <source src="assets/testimonial-video-3.mp4" type="video/mp4" />
             </video>
-            <video autoplay muted loop playsinline preload="metadata" poster="assets/testimonial-figma-4.png" aria-label="סרטון המלצה 4">
+            <video autoplay muted loop playsinline controls preload="metadata" poster="assets/testimonial-figma-4.png" aria-label="סרטון המלצה 4" aria-describedby="media-accessibility-note">
               <source src="assets/testimonial-video-4.mp4" type="video/mp4" />
             </video>
-            <video autoplay muted loop playsinline preload="metadata" poster="assets/testimonial-figma-5.png" aria-label="סרטון המלצה 5">
+            <video autoplay muted loop playsinline controls preload="metadata" poster="assets/testimonial-figma-5.png" aria-label="סרטון המלצה 5" aria-describedby="media-accessibility-note">
               <source src="assets/testimonial-video-5.mp4" type="video/mp4" />
             </video>
           </div>
@@ -301,6 +334,7 @@
 
       <section class="logo-strip" aria-label="שותפים ולקוחות נבחרים">
         <p>שותפים ולקוחות נבחרים</p>
+        <button class="carousel-control logo-control" type="button" data-carousel-toggle="logos" aria-pressed="false">עצירת לוגואים</button>
         <div class="logo-track">
           <img src="assets/logo-strip-1.png" alt="" />
           <img src="assets/logo-strip-2.png" alt="" />
@@ -375,17 +409,17 @@
           <a href="mailto:kipulim.il@gmail.com">kipulim.il@gmail.com</a>
           <div class="footer-socials" aria-label="רשתות חברתיות">
             <a class="social" href="https://wa.me/972526370505" aria-label="וואטסאפ"><img src="assets/social-whatsapp.svg" alt="" /></a>
-            <a class="social" href="#" aria-label="אינסטגרם"><img src="assets/social-instagram.svg" alt="" /></a>
-            <a class="social tiktok" href="#" aria-label="טיקטוק"><img src="assets/social-tiktok.svg" alt="" /></a>
-            <a class="social" href="#" aria-label="פייסבוק"><img src="assets/social-facebook.svg" alt="" /></a>
+            <span class="social unavailable" aria-hidden="true"><img src="assets/social-instagram.svg" alt="" /></span>
+            <span class="social tiktok unavailable" aria-hidden="true"><img src="assets/social-tiktok.svg" alt="" /></span>
+            <span class="social unavailable" aria-hidden="true"><img src="assets/social-facebook.svg" alt="" /></span>
           </div>
         </div>
         <div class="footer-legal">
           <h3>תנאים ומדיניות</h3>
-          <a href="#">מדיניות פרטיות</a>
-          <a href="#">תקנון האתר</a>
-          <a href="#">הצהרת נגישות</a>
-          <a href="#">מדיניות ביטולים</a>
+          <span class="footer-placeholder">מדיניות פרטיות</span>
+          <span class="footer-placeholder">תקנון האתר</span>
+          <a href="accessibility.html">הצהרת נגישות</a>
+          <span class="footer-placeholder">מדיניות ביטולים</span>
         </div>
         <div class="footer-nav">
           <h3>ניווט</h3>
@@ -397,22 +431,43 @@
               <a href="#benefits">הטבות</a>
             </div>
             <div>
-              <a href="#faq">שאלות ותשובות</a>
+              <a href="#services">השירותים שלנו</a>
+              <a href="#process">התהליך שלנו</a>
               <a href="#values">הערכים שלנו</a>
               <a href="#why">למה לבחור בנו</a>
-              <a href="#story">הסיפור שלנו</a>
-            </div>
-            <div>
-              <a href="#faq">שאלות ותשובות</a>
-              <a href="#values">הערכים שלנו</a>
-              <a href="#why">למה לבחור בנו</a>
-              <a href="#story">הסיפור שלנו</a>
             </div>
           </div>
         </div>
       </div>
       <p class="copyright">כל הזכויות שמורות לקיפולים</p>
     </footer>
+
+    <div class="accessibility-widget" data-accessibility-widget>
+      <button
+        class="accessibility-toggle"
+        type="button"
+        aria-label="פתיחת תפריט נגישות"
+        aria-expanded="false"
+        aria-controls="accessibility-panel"
+        data-accessibility-toggle
+      >
+        <span aria-hidden="true">נגישות</span>
+      </button>
+      <div class="accessibility-panel" id="accessibility-panel" role="region" aria-label="תפריט נגישות" hidden>
+        <div class="accessibility-head">
+          <strong>נגישות</strong>
+          <button type="button" aria-label="סגירת תפריט נגישות" data-accessibility-close>סגור</button>
+        </div>
+        <div class="accessibility-actions">
+          <button type="button" data-accessibility-action="font">הגדלת טקסט</button>
+          <button type="button" data-accessibility-action="contrast">ניגודיות גבוהה</button>
+          <button type="button" data-accessibility-action="links">הדגשת קישורים</button>
+          <button type="button" data-accessibility-action="spacing">ריווח טקסט</button>
+          <button type="button" data-accessibility-action="motion">עצירת אנימציות</button>
+          <button type="button" data-accessibility-action="reset">איפוס</button>
+        </div>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
