@@ -1855,11 +1855,16 @@ details p {
   display: grid;
   grid-template-columns: 152px 98px 49px;
   gap: 34px;
+  direction: ltr;
+  align-items: start;
 }
 
 .footer-nav-columns > div {
   display: grid;
+  grid-auto-rows: 20px;
   gap: 20px;
+  direction: rtl;
+  align-content: start;
 }
 
 .footer-legal {
