@@ -2610,16 +2610,29 @@ details p {
   .footer-nav-columns {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: stretch;
     gap: 20px;
     direction: rtl;
   }
 
   .footer-nav-columns > div {
+    width: 100%;
     display: grid;
-    justify-items: end;
+    justify-items: start;
     gap: 20px;
     direction: rtl;
+  }
+
+  .footer-nav-columns > div:nth-child(3) {
+    order: 1;
+  }
+
+  .footer-nav-columns > div:nth-child(2) {
+    order: 2;
+  }
+
+  .footer-nav-columns > div:nth-child(1) {
+    order: 3;
   }
 
   .footer-nav a {
