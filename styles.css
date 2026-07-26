@@ -1908,6 +1908,9 @@ details p {
 
   .menu-toggle {
     display: block;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
   }
 
   .main-nav,
