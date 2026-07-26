@@ -1316,31 +1316,39 @@ blockquote {
 
 .carousel-control {
   position: absolute;
-  z-index: 2;
-  top: 24px;
-  left: 24px;
-  min-height: 44px;
-  padding: 10px 18px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.62);
-  color: #fff;
-  cursor: pointer;
-  font-size: 13px;
-  line-height: 18px;
-  font-weight: 800;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .carousel-control:hover,
 .carousel-control:focus-visible {
+  z-index: 2;
+  top: 24px;
+  left: 24px;
+  width: auto;
+  height: auto;
+  min-height: 44px;
+  clip: auto;
+  clip-path: none;
+  padding: 10px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
   background: var(--yellow);
   color: var(--black);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 800;
+  white-space: normal;
 }
 
 .logo-control {
-  top: auto;
-  bottom: 24px;
-  left: 24px;
   border-color: rgba(17, 17, 17, 0.18);
   background: rgba(255, 255, 255, 0.78);
   color: var(--black);
@@ -2058,6 +2066,87 @@ details p {
 }
 
 @media (max-width: 640px) {
+  .header-inner {
+    height: 65px;
+  }
+
+  .site-header.is-open {
+    background: var(--black);
+  }
+
+  .site-header.is-open .main-nav {
+    inset: 65px 0 auto;
+    height: 490px;
+    padding: 47px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    background: var(--black);
+    text-align: center;
+  }
+
+  .site-header.is-open .main-nav a {
+    width: auto;
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: 0.325px;
+  }
+
+  .site-header.is-open .main-nav a[href="#about"] {
+    order: 1;
+  }
+
+  .site-header.is-open .main-nav a[href="#packages"] {
+    order: 2;
+  }
+
+  .site-header.is-open .main-nav a[href="#benefits"] {
+    order: 3;
+  }
+
+  .site-header.is-open .main-nav a[href="#testimonials"] {
+    order: 4;
+  }
+
+  .site-header.is-open .main-nav a[href="#process"] {
+    order: 5;
+  }
+
+  .site-header.is-open .main-nav a[href="#services"] {
+    order: 6;
+  }
+
+  .site-header.is-open .social-links {
+    position: absolute;
+    top: 477px;
+    left: 50%;
+    width: 180px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .site-header.is-open .social {
+    width: 34px;
+    height: 34px;
+  }
+
+  .site-header.is-open .social img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .site-header.is-open .social.tiktok img {
+    width: 15px;
+    height: 17px;
+  }
+
   .accessibility-widget {
     position: fixed;
     left: 18px;
@@ -2073,22 +2162,22 @@ details p {
   }
 
   .service-strip {
-    min-height: 86px;
-    padding: 29px 20px;
+    min-height: 54px;
+    padding: 17px 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0;
     flex-wrap: nowrap;
     white-space: nowrap;
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 13px;
+    line-height: 20px;
   }
 
   .service-strip span::after {
     display: inline;
-    margin-inline: 8px;
-    font-size: 18px;
+    margin-inline: 7px;
+    font-size: 13px;
   }
 
   .service-strip span {
@@ -2097,7 +2186,7 @@ details p {
 
   .service-strip span::before {
     content: attr(data-mobile-label);
-    font-size: 18px;
+    font-size: 13px;
   }
 
   .stats,
@@ -2108,7 +2197,7 @@ details p {
 
   .stats {
     width: 100%;
-    padding: 104px 34px;
+    padding: 52px 34px;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0;
@@ -2116,7 +2205,7 @@ details p {
   }
 
   .stats div {
-    min-height: 160px;
+    min-height: 134px;
     display: grid;
     align-content: center;
     border-left: 1px solid rgba(17, 17, 17, 0.07);
@@ -2132,16 +2221,16 @@ details p {
   }
 
   .stats strong {
-    font-size: 62px;
-    line-height: 70px;
+    font-size: 50px;
+    line-height: 58px;
   }
 
   .stats small {
-    margin-top: 13px;
+    margin-top: 10px;
     color: rgba(17, 17, 17, 0.38);
-    font-size: 13px;
-    line-height: 18px;
-    letter-spacing: 4px;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 3px;
   }
 
   .copy-block h2,
@@ -2156,14 +2245,26 @@ details p {
 
   .split-section,
   .receives,
-  .why,
-  .values,
   .process,
   .perks,
   .faq,
   .packages,
   .cta {
     padding-block: 88px;
+  }
+
+  .why,
+  .values {
+    padding-block: 88px;
+  }
+
+  .why .section-heading,
+  .values .section-heading {
+    margin-bottom: 40px;
+  }
+
+  .reason-list {
+    margin-top: 56px;
   }
 
   .value-grid article,
@@ -2201,11 +2302,15 @@ details p {
   }
 
   .services .section-heading h2 {
-    width: 260px;
+    width: min(320px, calc(100vw - 40px));
     margin-right: auto;
     margin-left: 0;
     font-size: 30px;
     line-height: 35px;
+  }
+
+  .services .section-heading h2 br {
+    display: none;
   }
 
   .service-row,
@@ -2400,49 +2505,53 @@ details p {
   }
 
   .footer-inner {
-    width: min(317px, calc(100% - 56px));
-    height: auto;
-    min-height: 1068px;
-    padding: 174px 0 118px;
-    display: flex;
-    flex-direction: column;
-    gap: 64px;
+    width: 393px;
+    max-width: 100%;
+    height: 1074px;
+    min-height: 0;
+    padding: 0;
+    display: block;
   }
 
   .footer-logo,
   .footer-contact,
   .footer-legal,
   .footer-nav {
-    position: static;
-    width: 100%;
+    position: absolute;
+    width: auto;
   }
 
   .footer-logo {
-    order: 4;
-    margin-top: auto;
+    left: 76px;
+    top: 1003px;
   }
 
   .footer-logo img {
     width: 241px;
     height: 29px;
-    margin-right: auto;
   }
 
   .footer-contact {
-    order: 1;
-    min-height: auto;
+    left: 44px;
+    top: 746px;
+    width: 305px;
+    min-height: 186px;
   }
 
   .footer-legal {
-    order: 2;
+    left: 44px;
+    top: 542px;
+    width: 305px;
   }
 
   .footer-nav {
-    order: 3;
+    left: 44px;
+    top: 63px;
+    width: 305px;
   }
 
   .footer-inner h3 {
-    margin-bottom: 24px;
+    margin-bottom: 28px;
     font-size: 16px;
     line-height: 20px;
   }
@@ -2451,10 +2560,14 @@ details p {
     margin-bottom: 18px;
     font-size: 14px;
     line-height: 20px;
+    font-weight: 400;
+    letter-spacing: 0.325px;
   }
 
   .footer-socials {
-    margin-top: 38px;
+    width: 206px;
+    margin: 68px 0 0;
+    gap: 17px;
   }
 
   .footer-nav h3 {
@@ -2463,13 +2576,25 @@ details p {
   }
 
   .footer-nav-columns {
-    grid-template-columns: minmax(126px, 1.45fr) minmax(88px, 1fr) minmax(49px, 0.6fr);
-    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    direction: rtl;
   }
 
   .footer-nav-columns > div {
-    grid-auto-rows: 20px;
+    display: grid;
+    justify-items: end;
     gap: 20px;
+    direction: rtl;
+  }
+
+  .copyright {
+    height: 36px;
+    padding-top: 11px;
+    font-size: 12px;
+    line-height: 14px;
   }
 
   .accessibility-panel {
