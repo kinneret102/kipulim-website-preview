@@ -163,6 +163,10 @@ img {
   height: 2px;
   margin: 5px auto;
   background: #fff;
+  transform-origin: center;
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
 }
 
 .micro {
@@ -2074,6 +2078,14 @@ details p {
     background: var(--black);
   }
 
+  .site-header.is-open .menu-toggle span:first-child {
+    transform: translateY(3.5px) rotate(45deg);
+  }
+
+  .site-header.is-open .menu-toggle span:last-child {
+    transform: translateY(-3.5px) rotate(-45deg);
+  }
+
   .site-header.is-open .main-nav {
     inset: 65px 0 auto;
     height: 490px;
@@ -2096,27 +2108,27 @@ details p {
     letter-spacing: 0.325px;
   }
 
-  .site-header.is-open .main-nav a[href="#about"] {
+  .site-header.is-open .main-nav a[href$="#about"] {
     order: 1;
   }
 
-  .site-header.is-open .main-nav a[href="#packages"] {
+  .site-header.is-open .main-nav a[href$="#packages"] {
     order: 2;
   }
 
-  .site-header.is-open .main-nav a[href="#benefits"] {
+  .site-header.is-open .main-nav a[href$="#benefits"] {
     order: 3;
   }
 
-  .site-header.is-open .main-nav a[href="#testimonials"] {
+  .site-header.is-open .main-nav a[href$="#testimonials"] {
     order: 4;
   }
 
-  .site-header.is-open .main-nav a[href="#process"] {
+  .site-header.is-open .main-nav a[href$="#process"] {
     order: 5;
   }
 
-  .site-header.is-open .main-nav a[href="#services"] {
+  .site-header.is-open .main-nav a[href$="#services"] {
     order: 6;
   }
 
@@ -2151,6 +2163,15 @@ details p {
     position: fixed;
     left: 18px;
     bottom: max(18px, env(safe-area-inset-bottom));
+  }
+
+  .statement-page {
+    padding-top: 116px;
+    padding-bottom: 88px;
+  }
+
+  .statement-content h1 {
+    margin-bottom: 32px;
   }
 
   .hero h1 {

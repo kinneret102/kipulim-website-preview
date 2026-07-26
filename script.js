@@ -1,9 +1,15 @@
 const header = document.querySelector("[data-header]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
 
+const setMenuOpen = (isOpen) => {
+  header?.classList.toggle("is-open", isOpen);
+  menuToggle?.setAttribute("aria-expanded", String(isOpen));
+  menuToggle?.setAttribute("aria-label", isOpen ? "סגירת תפריט" : "פתיחת תפריט");
+};
+
 menuToggle?.addEventListener("click", () => {
-  const isOpen = header.classList.toggle("is-open");
-  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  const isOpen = !header.classList.contains("is-open");
+  setMenuOpen(isOpen);
 
   if (isOpen) {
     header.querySelector(".main-nav a")?.focus();
@@ -12,8 +18,7 @@ menuToggle?.addEventListener("click", () => {
 
 document.querySelectorAll(".main-nav a").forEach((link) => {
   link.addEventListener("click", () => {
-    header.classList.remove("is-open");
-    menuToggle?.setAttribute("aria-expanded", "false");
+    setMenuOpen(false);
   });
 });
 
@@ -96,8 +101,7 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     setAccessibilityPanel(false);
     if (header.classList.contains("is-open")) {
-      header.classList.remove("is-open");
-      menuToggle?.setAttribute("aria-expanded", "false");
+      setMenuOpen(false);
       menuToggle?.focus();
     }
   }
