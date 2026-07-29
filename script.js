@@ -188,6 +188,45 @@ if (statsSection) {
   statsObserver.observe(statsSection);
 }
 
+const storyGallery = document.querySelector("[data-story-gallery]");
+const storySlides = document.querySelectorAll("[data-story-slide]");
+const storyPrev = document.querySelector("[data-story-prev]");
+const storyNext = document.querySelector("[data-story-next]");
+let currentStorySlide = 0;
+let storyGalleryTimer;
+
+const setStorySlide = (index) => {
+  if (!storySlides.length) return;
+
+  currentStorySlide = (index + storySlides.length) % storySlides.length;
+  storySlides.forEach((slide, slideIndex) => {
+    slide.classList.toggle("is-active", slideIndex === currentStorySlide);
+  });
+};
+
+const startStoryGallery = () => {
+  if (!storySlides.length || prefersReducedMotion) return;
+
+  window.clearInterval(storyGalleryTimer);
+  storyGalleryTimer = window.setInterval(() => {
+    setStorySlide(currentStorySlide + 1);
+  }, 5000);
+};
+
+const moveStoryGallery = (direction) => {
+  setStorySlide(currentStorySlide + direction);
+  startStoryGallery();
+};
+
+storyPrev?.addEventListener("click", () => moveStoryGallery(-1));
+storyNext?.addEventListener("click", () => moveStoryGallery(1));
+storyGallery?.addEventListener("mouseenter", () => window.clearInterval(storyGalleryTimer));
+storyGallery?.addEventListener("mouseleave", startStoryGallery);
+storyGallery?.addEventListener("focusin", () => window.clearInterval(storyGalleryTimer));
+storyGallery?.addEventListener("focusout", startStoryGallery);
+setStorySlide(0);
+startStoryGallery();
+
 const processCurrentNumber = document.querySelector(".process-current strong");
 const processCurrentTitle = document.querySelector(".process-current span");
 const processSteps = document.querySelectorAll(".process-step");
