@@ -2261,6 +2261,12 @@ details p {
     display: block;
   }
 
+  .accessibility-toggle,
+  .accessibility-toggle img {
+    width: 52px;
+    height: 52px;
+  }
+
   .statement-page {
     padding-top: 116px;
     padding-bottom: 88px;
@@ -2362,6 +2368,11 @@ details p {
 
   .story-gallery {
     width: 100%;
+  }
+
+  .story-gallery-arrows,
+  .story-gallery-controls {
+    bottom: -10px;
   }
 
   .story-gallery-controls button {
@@ -2624,8 +2635,8 @@ details p {
   }
 
   .accessibility-toggle {
-    width: 59px;
-    height: 59px;
+    width: 52px;
+    height: 52px;
   }
 
   .site-footer {
