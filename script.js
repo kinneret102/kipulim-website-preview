@@ -199,8 +199,11 @@ const setStorySlide = (index) => {
   if (!storySlides.length) return;
 
   currentStorySlide = (index + storySlides.length) % storySlides.length;
+  storyGallery?.style.setProperty("--story-index", currentStorySlide);
   storySlides.forEach((slide, slideIndex) => {
-    slide.classList.toggle("is-active", slideIndex === currentStorySlide);
+    const isActive = slideIndex === currentStorySlide;
+    slide.classList.toggle("is-active", isActive);
+    slide.setAttribute("aria-hidden", String(!isActive));
   });
 };
 
