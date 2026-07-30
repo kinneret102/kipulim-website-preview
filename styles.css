@@ -1619,9 +1619,14 @@ details p {
   transform: scale(1.018);
 }
 
+.package-image-card picture,
 .package-image-card img {
   width: 100%;
   height: 100%;
+  display: block;
+}
+
+.package-image-card img {
   object-fit: contain;
 }
 
@@ -2611,6 +2616,7 @@ details p {
     height: auto;
   }
 
+  .package-image-card picture,
   .package-image-card img {
     height: auto;
   }
