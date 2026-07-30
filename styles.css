@@ -2400,6 +2400,16 @@ details p {
     padding-top: 44px;
   }
 
+  #receives .copy-block,
+  #story .copy-block {
+    order: 1;
+  }
+
+  #receives .section-image,
+  #story .story-gallery {
+    order: 2;
+  }
+
   .why,
   .values {
     padding-block: 88px;
